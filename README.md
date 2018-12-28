@@ -19,6 +19,7 @@ Install all the dependencies from the requirements file in the project.
 ```sh
 $ cd Omniscence
 $ pip3 install -r requirements.txt
+$ pip3 install Omniscence
 ```
 ### Usage
 ```sh
