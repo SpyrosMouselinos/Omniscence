@@ -23,9 +23,9 @@ $ pip3 install Omniscence
 ```
 ### Usage
 ```sh
-import Omniscence as oms
+import Omniscence 
 # Initialization
-omni_analyzer = oms(file_dir = The csv file to load, 
+omni_analyzer = OmniAnalyzer(file_dir = The csv file to load, 
                     task = 'classification' / 'regression',
                     input_size = No. of features without the target,
                     target = 'the name of the target feature')
