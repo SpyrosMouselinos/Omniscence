@@ -1,3 +1,5 @@
+env:
+  -CODECOV_TOKEN="21530806-765e-4124-9552-80db1a220365"
 language: python
 python:
   - "3.5" 
