@@ -6,5 +6,5 @@ def op():
     return OmniAnalyzer(file_dir='test.csv',task='classification',input_size=0,target='no_target')
 
 def test_class_found(op):
-    assert op.load() == 'load successful'
+    assert op.load() == 'load ok'
     
