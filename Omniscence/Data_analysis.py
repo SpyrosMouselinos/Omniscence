@@ -17,7 +17,6 @@ class OmniAnalyzer:
         self.__categorical_features__ = []
         self.__categorical_dict__ = {}
         self.__stats__ = pd.DataFrame()
-    return 'init ok'
         
     def load(self):
         self.__data__ = pd.read_csv(self.__file_dir__)
@@ -37,7 +36,7 @@ class OmniAnalyzer:
             else:
                 self.__data_numeric__['enum_'+feature]=self.__data__[feature].map(self.__categorical_dict__)
         self.__stats__ = self.__data__.describe()
-        return 'load ok'
+        return True
 
     def report(self):
         try:
