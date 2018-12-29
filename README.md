@@ -1,5 +1,5 @@
 # Omniscence
-
+[![Build Status](https://travis-ci.org/SpyrosMouselinos/Omniscence.svg?branch=master)](https://travis-ci.org/SpyrosMouselinos/Omniscence)
 Omniscence is a multipurpose library for Data Analysis and Preprocessing, focused mainly on assisting the data input pipeline of Machine Learning Projects.
 
 # Alpha Version 0.1 is here!
