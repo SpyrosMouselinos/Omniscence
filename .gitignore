@@ -2,3 +2,6 @@
 *.xml
 *.coverage
 */__pycache__
+*/Omniscence/__pycache__
+*.bat
+*.batch
