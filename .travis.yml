@@ -9,5 +9,4 @@ script:
   - pytest -v
 after_success:
   - pytest --cov=./
-  - export CODECOV_TOKEN="21530806-765e-4124-9552-80db1a220365"
-  - bash < (curl -s https://codecov.io/bash)
+  - codecov -t 21530806-765e-4124-9552-80db1a220365
