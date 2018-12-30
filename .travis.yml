@@ -8,5 +8,5 @@ script:
   - echo "feature1,feature2,feature3;1,2,3" > test.csv
   - pytest -v
 after_success:
-  - pytest --cov=./
+  - coverage xml -i
   - codecov -t 21530806-765e-4124-9552-80db1a220365
