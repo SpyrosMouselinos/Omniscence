@@ -18,8 +18,7 @@ class OmniAnalyzer:
         self.__categorical_features__ = []
         self.__categorical_dict__ = {}
         self.__stats__ = pd.DataFrame()
-        print(os.environ['CI'])
-        print(os.environ['TRAVIS'])
+
         
     def load(self):
         self.__data__ = pd.read_csv(self.__file_dir__)
