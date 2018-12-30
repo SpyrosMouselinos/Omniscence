@@ -6,7 +6,7 @@ install:
   - pip install -r requirements.txt
   - pip install pytest-cov
 script:
-  - echo "feature1,feature2,feature3;1,2,3" > test.csv
+  - echo -e "feature1,feature2,target_feature\n1,2,target1\n2,3,target2\n1.5,2.5,target1\n2.5,3.5,target2\n2,4,target1\n4,6,target2" > test.csv
   - pytest -v
 after_success:
   - pytest --cov=./

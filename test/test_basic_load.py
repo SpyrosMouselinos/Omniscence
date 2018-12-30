@@ -24,3 +24,6 @@ def test_class_report(initialized_generator,loaded_generator):
 
 def test_class_analyze(loaded_generator):
     assert loaded_generator.analyze() == True
+
+def test_class_heatmap(loaded_generator):
+    assert loaded_generator.heatmap() == True

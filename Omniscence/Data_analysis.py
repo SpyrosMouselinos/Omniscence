@@ -100,13 +100,17 @@ class OmniAnalyzer:
         dropSelf[np.triu_indices_from(dropSelf)] = True
         colormap = sns.diverging_palette(220, 10, as_cmap=True)
         sns.heatmap(corr, cmap=colormap, annot=True, fmt=".2f", mask=dropSelf)
-        plt.xticks(range(len(corr.columns)), corr.columns);
+        plt.xticks(range(len(corr.columns)), corr.columns)
         plt.yticks(range(len(corr.columns)), corr.columns)
         plt.show()
+        return True
         
         
     def unsupervised_classification(self):
-        self.__labels__ = self.__data_numeric__.pop('enum_'+str(self.__target__))
+        if not(self.__target__ in self.__data_numeric__.columns):
+            self.__labels__ = self.__data_numeric__.pop('enum_'+str(self.__target__))
+        else:
+            self.__labels__ = self.__data_numeric__.pop(self.__target__)
 
         n_components = np.arange(1, len(self.__labels__.unique())+2)
         models = [BGM(n, covariance_type='full', random_state=1453).fit(self.__data_numeric__.values)
@@ -128,6 +132,5 @@ class OmniAnalyzer:
         self.__data_numeric__['cluster'] = estimator.predict(self.__data_numeric__)
         sns.pairplot(self.__data_numeric__, diag_kind="kde", hue='cluster', vars=[index for index in self.__data_numeric__ if index != 'cluster'],palette="husl")
         self.__data_numeric__['labels'] = self.__labels__
-
 
 
