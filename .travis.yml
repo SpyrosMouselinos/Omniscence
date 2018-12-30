@@ -10,4 +10,4 @@ script:
   - pytest -v
 after_success:
   - pytest --cov=./
-  - codecov -t 21530806-765e-4124-9552-80db1a220365
+  - codecov 
