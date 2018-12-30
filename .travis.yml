@@ -4,6 +4,7 @@ python:
   - "3.6"
 install:
   - pip install -r requirements.txt
+  - pip install pytest-cov
 script:
   - echo "feature1,feature2,feature3;1,2,3" > test.csv
   - pytest -v
