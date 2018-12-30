@@ -45,7 +45,7 @@ class OmniAnalyzer:
             try:
                 return self.__data__.describe()
             except:
-                pass
+                return None
             pass
     
     def normalize(self,method):
@@ -79,8 +79,19 @@ class OmniAnalyzer:
                 new_data[feature]= (new_data[feature] * (_std_)) + _mean_
 
     def analyze(self):
-        sns.pairplot(data=self.__data__, diag_kind="kde",hue=self.__target__, palette="husl")
-    
+        if not(self.__target__ in self.__data_numeric__.columns):
+            sns.pairplot(data=self.__data_numeric__, diag_kind="kde",
+            hue='enum_'+self.__target__,
+            vars=[index for index in self.__data_numeric__ if index != 'enum_'+self.__target__],palette="husl")
+            return True
+        else:
+            sns.pairplot(data=self.__data_numeric__, diag_kind="kde",
+            hue=self.__target__,
+            vars=[index for index in self.__data_numeric__ if index != self.__target__],palette="husl")
+            return True
+        return False
+         
+
     def heatmap(self):
         corr = self.__data_numeric__.corr()
         fig, ax = plt.subplots(figsize=(10, 10))
