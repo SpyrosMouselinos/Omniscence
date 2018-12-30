@@ -1,8 +1,8 @@
-*/dist
+dist/
+__pycache__/
+Omniscence/__pycache__
 *.csv
 *.xml
 *.coverage
-*/__pycache__
-*/Omniscence/__pycache__
 *.bat
 *.batch
