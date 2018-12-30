@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
     name = 'Omniscence',         
     packages = ['Omniscence'],   
-    version = '0.1.2',      
+    version = '0.2',      
     license='MIT', 
     description = 'A fully automated data-analysis library tool',  
     author = 'Spyridon Mouselinos',                   
     author_email = 'mouselinos.spur.kw@gmail.com',      
     url = 'https://github.com/SpyrosMouselinos/Omniscence.git',   # Provide either the link to your github or to your website
-    download_url = 'https://github.com/SpyrosMouselinos/Omniscence/archive/v_012.tar.gz',    # I explain this later on
+    download_url = 'https://github.com/SpyrosMouselinos/Omniscence/archive/v_02.tar.gz',    # I explain this later on
     keywords = ['Big Data', 'Data Analysis', 'Data Engineering' , 'Machine Learning', 'Neural Networks'],   
   install_requires=[          
           'numpy',
